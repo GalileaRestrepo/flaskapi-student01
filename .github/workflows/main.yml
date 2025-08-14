@@ -1,0 +1,9 @@
+on:
+  push:
+permissions:
+  contents: read
+  packages: write 
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE: ghcr.io/GalileaRestrepo/tec-actions-test
