@@ -46,11 +46,12 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Build and push (tag=latest)
-        uses: docker/build-push-action@v6with:
-        context: .
-        push: true
-        tags: ${{ env.IMAGE }}:latest
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ env.IMAGE }}:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
     
